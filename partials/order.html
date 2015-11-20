@@ -1,0 +1,19 @@
+<div class="header ordering">
+    <div class="container">
+        <h1 class="">Dawg Coffee<br>Orders</h1>
+        <p class=" motto">Supplying Beans to Sleepy Huskies Since 2015</p>
+    </div>
+</div>
+<div class="container clearfix">
+    <h2>Our Beans</h2>
+    <form id="search-form" action="" method="post">
+        <input type="text" name="search" class="form-control" placeholder="Search Bean Names" ng-model="query.name" autocomplete="off">
+    </form>
+    <div id="products" class="clearfix">
+        <div class="product" ng-repeat="product in products | orderBy: 'name' | filter : query">
+            <h4>{{product.name}} - {{product.price | currency : $ : 2}}</h4>
+            <p>{{product.description}}</p>
+            <a ui-sref="Details({beanId: product.id})" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>

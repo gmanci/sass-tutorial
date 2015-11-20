@@ -1,0 +1,41 @@
+<div class="header ordering">
+    <div class="container">
+        <h1 class="">Dawg Coffee<br>Orders</h1>
+        <p class=" motto">Supplying Beans to Sleepy Huskies Since 2015</p>
+    </div>
+</div>
+<div class="container cart clearfix">
+    <div class="item" ng-repeat="item in cart | orderBy : 'name'">
+        <h3>{{item.product.name}} - {{item.grind}}<span class="pull-right">{{item.product.price | currency : $ : 2}} Per lb</span></h3>
+        <form name="updateForm" ng-submit="updateItem()">
+            <input type="number" min="1" max="10" step="1" value="{{item.amount}}" ng-model="item.amount">
+            <input type="submit" value="Update" class="btn btn-primary">
+        </form>
+        <form ng-submit="removeItem($index)" name="deleteForm">
+            <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+        <span class="pull-right">{{item.amount * item.product.price | currency : $ : 2}}</span>
+    </div>
+    <div class="col-xs-12">
+        <span class="pull-right">Grand Total: {{total | currency : $ : 2}}</span>
+    </div>
+    <a class="btn btn-success pull-right" ng-click="submitCart()" data-toggle="modal" data-target="#thankYouModal">Place Order</a>
+</div>
+<div id="thankYouModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Thank You For Ordering</h4>
+      </div>
+      <div class="modal-body">
+        <p>You will recieve an email with your order conformation shortly.</p>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+
+  </div>
+</div>
