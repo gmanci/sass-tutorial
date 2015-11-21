@@ -1,281 +1,227 @@
-@import url('bootstrap.min.css');
-@import url('font-awesome.min.css');
+@import url("bootstrap.min.css");
+@import url("font-awesome.min.css");
 @import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,800,700,900);
-
-body{
-    background-color: #E9EAEE;
-    font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-}
+body {
+  background-color: #E9EAEE;
+  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
-}
+  font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif; }
 
 h2 {
-    color: #bc6026;
-}
+  color: #bc6026; }
 
 svg {
-    height:16px;
-    width:16px;
-    fill: currentColor;
-}
+  height: 16px;
+  width: 16px;
+  fill: currentColor; }
 
 .spinner,
 .spinner:before,
 .spinner:after {
-  border-radius: 50%;
-}
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
 .spinner:before,
 .spinner:after {
   position: absolute;
-  content: '';
-}
+  content: ''; }
+
 .spinner:before {
   width: 5.2em;
   height: 10.2em;
   background: #0dc5c1;
+  -webkit-border-radius: 10.2em 0 0 10.2em;
+  -moz-border-radius: 10.2em 0 0 10.2em;
+  -ms-border-radius: 10.2em 0 0 10.2em;
   border-radius: 10.2em 0 0 10.2em;
   top: -0.1em;
   left: -0.1em;
   -webkit-transform-origin: 5.2em 5.1em;
   transform-origin: 5.2em 5.1em;
   -webkit-animation: load2 2s infinite ease 1.5s;
-  animation: load2 2s infinite ease 1.5s;
-}
+  animation: load2 2s infinite ease 1.5s; }
+
 .spinner {
   font-size: 11px;
   text-indent: -99999em;
   margin: 55px auto;
   position: relative;
   width: 10em;
-  height: 10em;
-}
+  height: 10em; }
 
 nav {
-        position: fixed;
-        top:0px;
-        background-color: #181c22;
-        color:white;
-        font-size: 16px;
-        padding-left: 15px;
-        width:100%;
-        height:4em;
-        z-index: 100;
-    }
-
-nav > ul {
-    margin:0px;
-}
-
-nav > ul > li {
-    float:left;
-    color:white;
-}
-
-nav > ul > li > a {
-    color:white;
-    padding: 0.5em;
-    font-variant: small-caps;
-    text-transform: lowercase;
-    text-decoration: none;
-    float:left;
-}
-
-nav > ul > li > a:hover {
-    text-decoration: none;
-    color: #d87e28;
-}
-
-nav > ul > li > a:focus {
-    text-decoration: none;
-    color: #d87e28;
-}
+  position: fixed;
+  top: 0px;
+  background-color: #181c22;
+  color: white;
+  font-size: 16px;
+  padding-left: 15px;
+  width: 100%;
+  height: 4em;
+  z-index: 100; }
+  nav ul {
+    margin: 0px; }
+    nav ul li {
+      float: left;
+      color: white; }
+      nav ul li a {
+        color: white;
+        padding: 0.5em;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        text-decoration: none;
+        float: left; }
+      nav ul li a:hover {
+        text-decoration: none;
+        color: #d87e28; }
+      nav ul li a:focus {
+        text-decoration: none;
+        color: #d87e28; }
 
 .header {
-    text-align: left;
-    padding-top:3em;
-}
+  text-align: left;
+  padding-top: 3em; }
 
 .motto {
-    display:none;
-}
+  display: none; }
 
-.headline  {
-    font-style: italic;
-}
+.headline {
+  font-style: italic; }
 
 .headline-cup {
-    display: none;
-}
+  display: none; }
 
 .svg-info {
-    display:block;
-    margin:auto;
-    text-align: center;
-    fill: #BC6128;
-    margin-bottom: 1em;
-}
+  display: block;
+  margin: auto;
+  text-align: center;
+  fill: #BC6128;
+  margin-bottom: 1em; }
 
 .info {
-    text-align: center;
-    background-color: #DCDDE1;
-    padding:1em 0em;
-}
+  text-align: center;
+  background-color: #DCDDE1;
+  padding: 1em 0em; }
 
 .map {
-    border-radius: 5px;
-}
+  border-radius: 5px; }
 
 .menu {
-    padding:1em 0em;
-}
-
-.menu > dd {
-    padding-left:1em;
-    font-style: italic;
-}
+  padding: 1em 0em; }
+  .menu dd {
+    padding-left: 1em;
+    font-style: italic; }
 
 .story {
-    background-color: #DCDDE1;
-    padding:1em 0em;
-}
-
-.story img {
+  background-color: #DCDDE1;
+  padding: 1em 0em; }
+  .story img {
     border-radius: 5px;
     max-height: 300px;
-    margin-left: 1em;
-}
+    margin-left: 1em; }
 
 footer {
-    border-top: 3px solid #d87e28;
-    background-color: #B6B7BB;
-    font-size: 12px;
-    padding-top: 1em;
-}
+  border-top: 3px solid #d87e28;
+  background-color: #B6B7BB;
+  font-size: 12px;
+  padding-top: 1em; }
 
 .jump:before {
-    display: block;
-    content: " ";
-    margin-top: -75px;
-    height: 75px;
-    visibility: hidden;
-}
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden; }
 
 .info > div > div {
-    padding:1em 0em;
-}
+  padding: 1em 0em; }
 
 .soon {
-    background-color: #E9EAEE;
-}
+  background-color: #E9EAEE; }
 
 #search-form {
-    padding:25px 0px;
-}
+  padding: 25px 0px; }
 
 .product, .details > div, .cart > .item {
-    padding:15px 0px;
-    border-bottom:1px solid #aaa;
-}
+  padding: 15px 0px;
+  border-bottom: 1px solid #aaa; }
 
 .product:last-child, .details > div:last-child, .cart > .item:last-child {
-    border-bottom:0px;
-}
+  border-bottom: 0px; }
 
 .details {
-    padding:25px 0px;
-}
+  padding: 25px 0px; }
 
 label {
-    font-size:.7em;
-}
+  font-size: .7em; }
 
 .cart > .item > form {
-    display:inline-block;
-    padding:15px;
-}
+  display: inline-block;
+  padding: 15px; }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
+  body {
+    font-size: 20px; }
 
-    body {
-        font-size: 20px;
-    }
+  h2 {
+    text-align: center;
+    padding-bottom: 1em; }
 
-    h2 {
-        text-align: center;
-        padding-bottom: 1em;
-    }
+  svg {
+    height: 20px;
+    width: 20px; }
 
-    svg {
-        height: 20px;
-        width:20px;
-    }
+  nav {
+    background-color: rgba(24, 28, 34, 0.8); }
+    nav ul li {
+      padding: 1em; }
 
-    nav {
-        background-color: rgba(24, 28, 34, 0.8);
-    }
-
-    nav > ul > li {
-        padding: 1em;
-    }
-
-    .header {
+  .header {
     text-align: right;
-    background-image: url('../img/background-sm.jpg');
+    background-image: url("../img/background-sm.jpg");
     background-position: left top;
     background-repeat: no-repeat;
-    background-size:cover;
-    color:white;
-    min-height: 550px;
-    }
+    background-size: cover;
+    color: white;
+    min-height: 550px; }
 
+  .motto {
+    display: initial; }
 
-    .motto {
-        display: initial;
-    }
+  .headline p {
+    font-size: 1.25em;
+    text-align: center;
+    padding: 3em 0em; }
 
-    .headline p {
-        font-size: 1.25em;
-        text-align: center;
-        padding: 3em 0em;
-    }
+  .headline-cup {
+    display: block;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    text-align: center;
+    margin: auto;
+    fill: #BC6128; }
 
-    .headline-cup {
-        display: block;
-        font-size:1.5em;
-        padding-bottom: 1em;
-        text-align: center;
-        margin:auto;
-        fill: #BC6128;
-    }
+  .story img {
+    max-height: 400px; }
 
-    .story img {
-        max-height: 400px;
-    }
-
-    footer div:last-child {
-        text-align: right;
-    }
-}
-@media(min-width: 992px) {
-    .header {
-        background-image: url('../img/background-md.jpg');
-    }
+  footer div:last-child {
+    text-align: right; } }
+@media (min-width: 992px) {
+  .header {
+    background-image: url("../img/background-md.jpg"); }
     .header h1 {
-        font-size: 4em;
-    }
-}
+      font-size: 4em; } }
+@media (min-width: 1200px) {
+  .header {
+    background-image: url("../img/background-lg.jpg"); }
 
-@media(min-width: 1200px) {
-     .header {
-        background-image: url('../img/background-lg.jpg');
-    }
-    .ordering {
-        min-height: 225px;
-    }
+  .ordering {
+    min-height: 225px; } }
 
-}
+/*# sourceMappingURL=main.css.map */
